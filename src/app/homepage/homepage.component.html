@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-end mt-2 mb-2">
+    <button class="btn btn-primary" (click)="goToCart()">Ostukorv</button>
+</div>
+
+<div class="row">
+  <div class="col-sm-2" *ngFor="let item of products">
+    <div class="card">
+      <img [src]="item.image" class="card-img-top" />
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+        <button class="btn btn-primary" (click)="addToCart(item)">
+          Lisa ostukorvi
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
